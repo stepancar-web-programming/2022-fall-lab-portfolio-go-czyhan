@@ -1,4 +1,5 @@
 <template>
+  <div>
   <n-config-provider :theme-overrides="themeOverrides">
     <n-space vertical>
       <n-layout>
@@ -27,7 +28,7 @@
               </div>
             </n-col>
             <n-col :span="4" align="center">
-              <n-switch size="large" style="padding: 22px 0 0 70%;" v-model:value="disabled" /><br>
+              <n-switch size="large" style="padding: 22px 0 0 70%;" :value="disabled" /><br>
             </n-col>
           </n-row>
 
@@ -43,7 +44,7 @@
           </n-layout-content>
           <n-layout-sider content-style="padding: 24px; padding-left: 5px" :width="40">
 
-            <n-slider v-model:value="value" vertical reverse :step="1" :tooltip="false">
+            <n-slider :value="value" vertical reverse :step="1" :tooltip="false">
               <template #thumb>
                 <n-icon-wrapper :size="24" :border-radius="12">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -65,7 +66,7 @@
         </n-layout-footer>
       </n-layout>
     </n-space>
-  </n-config-provider>
+  </n-config-provider></div>
 </template>
 
 <script lang="ts">

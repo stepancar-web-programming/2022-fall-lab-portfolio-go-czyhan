@@ -1,7 +1,6 @@
-import service from "."
+import service from "./index"
 
-
-export  function getReadme(url:string) {
+export function getReadme(url: string) {
     return service({
         url: url,
         method: "Get"

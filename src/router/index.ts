@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: HomeView,
-    redirect:"about-me",
+    redirect: "about-me",
     children: [
       {
         path: 'about-me',

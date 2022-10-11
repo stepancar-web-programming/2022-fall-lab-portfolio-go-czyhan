@@ -1,8 +1,10 @@
 <template>
-  <router-view />
-  <n-notification-provider>
-    <content />
-  </n-notification-provider>
+  <div>
+    <router-view />
+    <n-notification-provider>
+      <content />
+    </n-notification-provider>
+  </div>
 </template>
 
 <style>
