@@ -34,49 +34,86 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: "neurotechnology-and-programming",
             name: "neurotechnology-and-programming",
-            component: () => import("../views/project/NeurotechnologyView.vue"),
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/Neurotechnology-And-Programming-Courses/readme",
+              count: 22,
+            },
+            component: () => import("../views/ProjectView.vue"),
           },
           {
             path: "ai-system",
             name: "ai-system",
-            component: () => import("../views/project/AISystemView.vue"),
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/artificial-intelligence-system/readme",
+              count: 20,
+            },
+            component: () => import("../views/ProjectView.vue"),
           },
           {
             path: "leanring-neural-network",
             name: "leanring-neural-network",
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/LearningNeuralNetworks/readme",
+              count: 22,
+            },
             component: () =>
-              import("../views/project/LeanringNeuralNetworkView.vue"),
+              import("../views/ProjectView.vue"),
           },
           {
             path: "graph-theory",
             name: "graph-theory",
-            component: () => import("../views/project/GraphTheoryView.vue"),
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/graph-theory-algorithm/readme",
+              count: 22,
+            },
+          
+            component: () => import("../views/ProjectView.vue"),
           },
           {
             path: "emotion-recognition",
             name: "emotion-recognition",
+            meta: {
+              html: "https://api.github.com/repos/DenisAndGzh/emotion-recognition/readme",
+              count: 20,
+            },
             component: () =>
-              import("../views/project/EmotionRecognitionlNetworkView.vue"),
+              import("../views/ProjectView.vue"),
           },
           {
             path: "chatex",
             name: "chatex",
-            component: () => import("../views/project/ChatexView.vue"),
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/chatex/readme",
+              count: 20,
+            },
+            component: () => import("../views/ProjectView.vue"),
           },
           {
             path: "adopt-animal",
             name: "adopt-animal",
-            component: () => import("../views/project/AdoptAnimalView.vue"),
+            meta: {
+              html: "https://api.github.com/repos/DenisAndGzh/adoptanimal/readme",
+              count: 20,
+            },
+            component: () => import("../views/ProjectView.vue"),
           },
           {
             path: "bluetooth-car",
             name: "bluetooth-car",
-            component: () => import("../views/project/BluetoothCar.vue"),
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/BluetoothCar/readme",
+              count: 20,
+            },
+            component: () => import("../views/ProjectView.vue"),
           },
           {
             path: "ai-gobang",
             name: "ai-gobang",
-            component: () => import("../views/project/AIGobangView.vue"),
+            meta: {
+              html: "https://api.github.com/repos/spbgzh/AI-GoBang/readme",
+              count: 20,
+            },
+            component: () => import("../views/ProjectView.vue"),
           },
         ],
       },

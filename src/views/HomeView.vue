@@ -76,7 +76,7 @@
               />
             </n-layout-sider>
             <n-layout-content content-style="padding: 24px;">
-              <router-view></router-view>
+              <router-view :key="($route.meta.html as string)"></router-view>
             </n-layout-content>
             <n-layout-sider
               content-style="padding: 24px; padding-left: 5px"
