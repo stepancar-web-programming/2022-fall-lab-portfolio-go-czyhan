@@ -1,8 +1,8 @@
-import service from "./index"
+import service from "./index";
 
 export function getReadme(url: string) {
-    return service({
-        url: url,
-        method: "Get"
-    })
+  return service({
+    url: url,
+    method: "Get",
+  });
 }

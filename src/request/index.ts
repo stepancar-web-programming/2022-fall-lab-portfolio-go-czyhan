@@ -1,3 +1,3 @@
 import axios from "axios";
-const service = axios.create()
-export default service
+const service = axios.create();
+export default service;
