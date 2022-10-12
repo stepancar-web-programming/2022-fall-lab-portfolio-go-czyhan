@@ -31,15 +31,23 @@ export default defineComponent({
   },
   setup() {
     onMounted(() => {
-      getReadme(
-        "https://api.github.com/repos/spbgzh/Neurotechnology-And-Programming-Courses/readme"
-      ).then((res) => {
-        data.content = decodeURIComponent(
-          escape(window.atob(res.data.content))
-        );
-        var url = res.data.html_url;
-        data.url = url.substring(url, url.length - 22);
-      });
+      try {
+        getReadme(
+          "https://api.github.com/repos/spbgzh/Neurotechnology-And-Programming-Courses/readme"
+        ).then((res) => {
+          data.content = decodeURIComponent(
+            Array.prototype.map
+              .call(atob(res.data.content), function (c) {
+                return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+              })
+              .join("")
+          );
+          var url = res.data.html_url;
+          data.url = url.substring(url, url.length - 22);
+        });
+      } catch (e) {
+        console.log(e);
+      }
     });
     return { data };
   },
