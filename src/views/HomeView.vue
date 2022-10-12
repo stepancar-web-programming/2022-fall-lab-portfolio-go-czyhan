@@ -50,7 +50,7 @@
                 <n-switch
                   size="large"
                   style="padding: 22px 0 0 70%"
-                  :value="disabled"
+                  v-model:value="disabled"
                 /><br />
               </n-col>
             </n-row>
@@ -83,7 +83,7 @@
               :width="40"
             >
               <n-slider
-                :value="value"
+                v-model:value="value"
                 vertical
                 reverse
                 :step="1"
@@ -132,7 +132,6 @@ import { h, defineComponent, ref, Component, watch, reactive } from "vue";
 import { RouterLink } from "vue-router";
 import { NIcon } from "naive-ui";
 import type { MenuOption } from "naive-ui";
-
 import {
   BookOutline as BookIcon,
   PersonOutline as PersonIcon,
@@ -152,7 +151,6 @@ import {
   HappyOutline as HappyOutline,
   GitMergeOutline as GitMergeOutline,
 } from "@vicons/ionicons5";
-
 function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) });
 }
@@ -175,7 +173,6 @@ const changeColor = (value: number) => {
     colorData.color = str;
   }
 };
-
 const menuOptions: MenuOption[] = [
   {
     label: () =>
@@ -375,11 +372,9 @@ const menuOptions: MenuOption[] = [
     icon: renderIcon(ChatbubbleEllipsesOutline),
   },
 ];
-
 const colorData = reactive({
   color: "#1d1dc8",
 });
-
 var themeColor = "#1d1dc8";
 var themeOverrides = reactive({
   common: {
@@ -392,7 +387,6 @@ var themeOverrides = reactive({
     fillColorHover: themeColor,
   },
 });
-
 const value = ref(50);
 var flag = true;
 const disabled = ref(true);
@@ -410,7 +404,6 @@ const addNum = () => {
     value.value = value.value + 1;
   }
 };
-
 var timer: number;
 export default defineComponent({
   setup() {
@@ -435,7 +428,6 @@ export default defineComponent({
     timer = window.setInterval(() => {
       setTimeout(addNum, 0);
     }, 70);
-
     return {
       inverted: ref(false),
       menuOptions,
@@ -454,7 +446,6 @@ export default defineComponent({
 .logo {
   padding: 2px 0 0 0;
 }
-
 .n-gradient-text {
   font-size: 40px;
   padding: 10px 0 0 80px;
