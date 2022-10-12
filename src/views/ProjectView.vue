@@ -33,11 +33,11 @@ export default defineComponent({
   setup() {
     onMounted(() => {
       const meta = useRoute().meta;
-      console.log(meta);
-      const html: string = meta.html as string;
-      const count: number = meta.count as number;
+      const repository: string = meta.repository as string;
       try {
-        getReadme(html).then((res) => {
+        getReadme(
+          "https://api.github.com/repos/" + repository + "/readme"
+        ).then((res) => {
           data.content = decodeURIComponent(
             Array.prototype.map
               .call(atob(res.data.content), function (c) {
@@ -45,8 +45,7 @@ export default defineComponent({
               })
               .join("")
           );
-          var url = res.data.html_url;
-          data.url = url.substring(url, url.length - count);
+          data.url = "https://github.com/" + repository;
         });
       } catch (e) {
         console.log(e);
