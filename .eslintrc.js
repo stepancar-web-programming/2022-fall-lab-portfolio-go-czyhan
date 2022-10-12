@@ -1,20 +1,27 @@
+/* eslint-env node */
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 module.exports = {
+  root: true,
   env: {
-    node: true,
     browser: true,
-    es2021: true,
+    amd: true,
+    node: true,
   },
   extends: [
+    "plugin:vue/vue3-essential",
     "eslint:recommended",
-    "plugin:vue/essential",
-    "plugin:@typescript-eslint/recommended",
+    "@vue/eslint-config-typescript",
+    "@vue/eslint-config-prettier",
+    "./.eslintrc-auto-import.json",
+  ],
+  overrides: [
+    {
+      files: ["cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}"],
+      extends: ["plugin:cypress/recommended"],
+    },
   ],
   parserOptions: {
-    ecmaVersion: 12,
-    parser: "@typescript-eslint/parser",
-    sourceType: "module",
+    ecmaVersion: "latest",
   },
-  plugins: ["vue", "@typescript-eslint"],
-  parser: "vue-eslint-parser",
-  rules: {},
 };
