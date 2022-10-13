@@ -64,7 +64,7 @@
               :width="300"
               :native-scrollbar="false"
               :inverted="inverted"
-              style="height: calc(100vh - 115px)"
+              style="min-height: calc(100vh - 115px)"
             >
               <n-menu
                 :collapsed-width="64"
@@ -76,7 +76,7 @@
               />
             </n-layout-sider>
             <n-layout-content content-style="padding: 24px;">
-              <router-view :key="($route.meta.html as string)"></router-view>
+              <router-view :key="($route.meta.repository as string)"></router-view>
             </n-layout-content>
             <n-layout-sider
               content-style="padding: 24px; padding-left: 5px"
