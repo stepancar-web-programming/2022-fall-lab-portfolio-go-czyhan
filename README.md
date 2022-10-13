@@ -1,12 +1,12 @@
 # HomePage of Spbgzh
 
-# Introduction
+## Introduction
 
 This is the homepage of Spbgzh  
 
 Built with the naive-ui component library  
 
-## Implemented functionality
+### Implemented functionality
 
 Modify theme color:  
 
@@ -16,32 +16,32 @@ Display markdown files:
 
 In project module, get the markdown file information of the project through github api. The markdown file data converted from base64 data to json is displayed on the window through the third-party plugin vue3-markdown-it
 
-![](https://img.shields.io/badge/wechat-Spbgzh-green)       ![](https://img.shields.io/badge/mail-zjjhgzh%40gmail.com-blue)
+![wechat](https://img.shields.io/badge/wechat-Spbgzh-green)       ![email](https://img.shields.io/badge/mail-zjjhgzh%40gmail.com-blue)
 
-# Website Address
+## Website Address
 
 [Spbgzh.com](https://spbgzh.com)
 
-## Project setup
+### Project setup
 
-```
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 
-```
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 
-```
+```bash
 npm run build
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 
-```
+```bash
 npm run lint
 ```
