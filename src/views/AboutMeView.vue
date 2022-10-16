@@ -104,24 +104,24 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 import {
   ArrowBack,
   ArrowForward,
-  HardwareChipOutline as HardwareChipOutline,
-} from "@vicons/ionicons5";
+  HardwareChipOutline
+} from '@vicons/ionicons5'
 
 export default defineComponent({
   components: {
     ArrowBack,
-    ArrowForward,
+    ArrowForward
   },
-  setup() {
+  setup () {
     return {
-      HardwareChipOutline,
-    };
-  },
-});
+      HardwareChipOutline
+    }
+  }
+})
 </script>
 
 <style scoped>

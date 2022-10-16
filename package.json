@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.12.0",
@@ -19,18 +19,20 @@
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "@vue/eslint-config-typescript": "^9.1.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.25.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.0",
     "eslint-plugin-vue": "^9.6.0",
     "naive-ui": "^2.33.3",
     "sass": "^1.55.0",
     "sass-loader": "^13.0.2",
-    "typescript": "~4.5.5",
+    "typescript": "^4.8.4",
     "vfonts": "^0.0.3",
     "vue3-markdown-it": "^1.0.10",
     "webpack": "^5.74.0"

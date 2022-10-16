@@ -1,116 +1,116 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      name: 'home',
       component: HomeView,
-      redirect: "about-me",
+      redirect: 'about-me',
       children: [
         {
-          path: "about-me",
-          name: "about-me",
+          path: 'about-me',
+          name: 'about-me',
           meta: {
-            title: "About Me",
+            title: 'About Me'
           },
-          component: () => import("../views/AboutMeView.vue"),
+          component: async () => await import('../views/AboutMeView.vue')
         },
         {
-          path: "contact-me",
-          name: "contact-me",
+          path: 'contact-me',
+          name: 'contact-me',
           meta: {
-            title: "Contact Me",
+            title: 'Contact Me'
           },
-          component: () => import("../views/ContactMeView.vue"),
+          component: async () => await import('../views/ContactMeView.vue')
         },
         {
-          path: "project",
-          name: "project",
+          path: 'project',
+          name: 'project',
           meta: {
-            title: "project",
+            title: 'project'
           },
           children: [
             {
-              path: "neurotechnology-and-programming",
-              name: "neurotechnology-and-programming",
+              path: 'neurotechnology-and-programming',
+              name: 'neurotechnology-and-programming',
               meta: {
-                repository: "spbgzh/Neurotechnology-And-Programming-Courses",
+                repository: 'spbgzh/Neurotechnology-And-Programming-Courses'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "ai-system",
-              name: "ai-system",
+              path: 'ai-system',
+              name: 'ai-system',
               meta: {
-                repository: "spbgzh/artificial-intelligence-system",
+                repository: 'spbgzh/artificial-intelligence-system'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "leanring-neural-network",
-              name: "leanring-neural-network",
+              path: 'leanring-neural-network',
+              name: 'leanring-neural-network',
               meta: {
-                repository: "spbgzh/LearningNeuralNetworks",
+                repository: 'spbgzh/LearningNeuralNetworks'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "graph-theory",
-              name: "graph-theory",
+              path: 'graph-theory',
+              name: 'graph-theory',
               meta: {
-                repository: "spbgzh/graph-theory-algorithm",
+                repository: 'spbgzh/graph-theory-algorithm'
               },
 
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "emotion-recognition",
-              name: "emotion-recognition",
+              path: 'emotion-recognition',
+              name: 'emotion-recognition',
               meta: {
-                repository: "DenisAndGzh/emotion-recognition",
+                repository: 'DenisAndGzh/emotion-recognition'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "chatex",
-              name: "chatex",
+              path: 'chatex',
+              name: 'chatex',
               meta: {
-                repository: "spbgzh/chatex",
+                repository: 'spbgzh/chatex'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "adopt-animal",
-              name: "adopt-animal",
+              path: 'adopt-animal',
+              name: 'adopt-animal',
               meta: {
-                repository: "DenisAndGzh/adoptanimal",
+                repository: 'DenisAndGzh/adoptanimal'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "bluetooth-car",
-              name: "bluetooth-car",
+              path: 'bluetooth-car',
+              name: 'bluetooth-car',
               meta: {
-                repository: "spbgzh/BluetoothCar",
+                repository: 'spbgzh/BluetoothCar'
               },
-              component: () => import("../views/ProjectView.vue"),
+              component: async () => await import('../views/ProjectView.vue')
             },
             {
-              path: "ai-gobang",
-              name: "ai-gobang",
+              path: 'ai-gobang',
+              name: 'ai-gobang',
               meta: {
-                repository: "spbgzh/AI-GoBang",
+                repository: 'spbgzh/AI-GoBang'
               },
-              component: () => import("../views/ProjectView.vue"),
-            },
-          ],
-        },
-      ],
-    },
-  ],
-});
+              component: async () => await import('../views/ProjectView.vue')
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
 
-export default router;
+export default router

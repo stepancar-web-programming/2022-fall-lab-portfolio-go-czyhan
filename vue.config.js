@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "/mypage/",
-  runtimeCompiler: true,
-};
+  // publicPath: '/mypage/',  // For github page
+  runtimeCompiler: true
+}
