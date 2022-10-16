@@ -107,20 +107,20 @@
 import {
   ArrowBack,
   ArrowForward,
-  HardwareChipOutline
-} from '@vicons/ionicons5'
+  HardwareChipOutline,
+} from "@vicons/ionicons5";
 
 export default defineComponent({
   components: {
     ArrowBack,
-    ArrowForward
+    ArrowForward,
   },
-  setup () {
+  setup() {
     return {
-      HardwareChipOutline
-    }
-  }
-})
+      HardwareChipOutline,
+    };
+  },
+});
 </script>
 
 <style scoped>

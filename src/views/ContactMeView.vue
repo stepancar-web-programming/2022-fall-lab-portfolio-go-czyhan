@@ -97,40 +97,40 @@
 </template>
 
 <script lang="ts">
-import type { AxiosResponse } from 'axios'
+import type { AxiosResponse } from "axios";
 import {
   LogoGithub,
   PeopleOutline,
   MailOutline,
   LogoWechat,
-  LogoVk
-} from '@vicons/ionicons5'
+  LogoVk,
+} from "@vicons/ionicons5";
 
 export default defineComponent({
-  data () {
+  data() {
     return {
       following: 0,
       followers: 0,
-      public_repos: 0
-    }
+      public_repos: 0,
+    };
   },
-  mounted () {
+  mounted() {
     axios
-      .get('https://api.github.com/users/spbgzh')
-      .then((response:AxiosResponse) => {
-        console.log(response.data)
-        this.following = response.data.following
-        this.followers = response.data.followers
-        this.public_repos = response.data.public_repos
+      .get("https://api.github.com/users/spbgzh")
+      .then((response: AxiosResponse) => {
+        console.log(response.data);
+        this.following = response.data.following;
+        this.followers = response.data.followers;
+        this.public_repos = response.data.public_repos;
       })
-      .catch((error:any) => {
-        console.log(error)
-      })
+      .catch((error: any) => {
+        console.log(error);
+      });
   },
-  setup () {
-    return { LogoGithub, PeopleOutline, MailOutline, LogoWechat, LogoVk }
-  }
-})
+  setup() {
+    return { LogoGithub, PeopleOutline, MailOutline, LogoWechat, LogoVk };
+  },
+});
 </script>
 
 <style scoped>
@@ -144,7 +144,7 @@ export default defineComponent({
 
 .custom-tabs .n-tabs-bar::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   right: 0;
   top: 0;

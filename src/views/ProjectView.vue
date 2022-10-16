@@ -4,7 +4,7 @@
       hoverable
       :segmented="{
         content: true,
-        footer: 'soft'
+        footer: 'soft',
       }"
     >
       <Markdown :source="data.content" />
@@ -16,49 +16,49 @@
 </template>
 
 <script lang="ts">
-import Markdown from 'vue3-markdown-it'
-import axios from 'axios'
+import Markdown from "vue3-markdown-it";
+import axios from "axios";
 
 const getReadme = (url: string) => {
   return axios.create()({
     url,
-    method: 'Get'
-  })
-}
+    method: "Get",
+  });
+};
 
 const data = reactive({
-  content: '',
-  url: ''
-})
+  content: "",
+  url: "",
+});
 
 export default defineComponent({
   components: {
-    Markdown
+    Markdown,
   },
-  setup () {
+  setup() {
     onMounted(() => {
-      const meta = useRoute().meta
-      const repository: string = meta.repository as string
+      const meta = useRoute().meta;
+      const repository: string = meta.repository as string;
       try {
         getReadme(
-          'https://api.github.com/repos/' + repository + '/readme'
+          "https://api.github.com/repos/" + repository + "/readme"
         ).then((res) => {
           data.content = decodeURIComponent(
             Array.prototype.map
               .call(atob(res.data.content), function (c) {
-                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+                return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
               })
-              .join('')
-          )
-          data.url = 'https://github.com/' + repository
-        })
+              .join("")
+          );
+          data.url = "https://github.com/" + repository;
+        });
       } catch (e) {
-        console.log(e)
+        console.log(e);
       }
-    })
-    return { data }
-  }
-})
+    });
+    return { data };
+  },
+});
 </script>
 
 <style scoped></style>
