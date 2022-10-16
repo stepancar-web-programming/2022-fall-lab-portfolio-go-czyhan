@@ -18,8 +18,6 @@
 <script lang="ts">
 import Markdown from 'vue3-markdown-it'
 import axios from 'axios'
-import { defineComponent, onMounted, reactive } from 'vue'
-import { useRoute } from 'vue-router'
 
 const getReadme = (url: string) => {
   return axios.create()({

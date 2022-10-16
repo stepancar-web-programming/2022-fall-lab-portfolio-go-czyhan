@@ -97,8 +97,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import axios from 'axios'
+import type { AxiosResponse } from 'axios'
 import {
   LogoGithub,
   PeopleOutline,
@@ -118,13 +117,13 @@ export default defineComponent({
   mounted () {
     axios
       .get('https://api.github.com/users/spbgzh')
-      .then((response) => {
+      .then((response:AxiosResponse) => {
         console.log(response.data)
         this.following = response.data.following
         this.followers = response.data.followers
         this.public_repos = response.data.public_repos
       })
-      .catch((error) => {
+      .catch((error:any) => {
         console.log(error)
       })
   },

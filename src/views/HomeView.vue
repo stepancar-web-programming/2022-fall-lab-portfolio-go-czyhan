@@ -130,9 +130,8 @@
 </template>
 
 <script lang="ts">
-import { h, defineComponent, ref, Component, watch, reactive } from 'vue'
-import { RouterLink } from 'vue-router'
 import { NIcon, MenuOption } from 'naive-ui'
+import type { Component } from 'vue'
 import {
   BookOutline as BookIcon,
   PersonOutline as PersonIcon,
@@ -152,6 +151,7 @@ import {
   HappyOutline,
   GitMergeOutline
 } from '@vicons/ionicons5'
+
 function renderIcon (icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
