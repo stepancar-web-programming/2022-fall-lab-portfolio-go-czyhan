@@ -1,8 +1,9 @@
 /* eslint-disable quote-props */
+import AutoImport from "unplugin-auto-import/webpack";
 module.exports = {
   configureWebpack: {
     plugins: [
-      require("unplugin-auto-import/webpack")({
+      AutoImport({
         eslintrc: {
           enabled: true,
         },
