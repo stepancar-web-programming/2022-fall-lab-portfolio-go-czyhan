@@ -123,7 +123,7 @@ export default defineComponent({
         this.followers = response.data.followers;
         this.public_repos = response.data.public_repos;
       })
-      .catch((error: any) => {
+      .catch((error: Error) => {
         console.log(error);
       });
   },

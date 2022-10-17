@@ -1,4 +1,5 @@
 /* eslint-disable quote-props */
+/* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = {
   configureWebpack: {
     plugins: [
