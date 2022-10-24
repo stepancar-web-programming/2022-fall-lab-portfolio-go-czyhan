@@ -71,7 +71,7 @@
                 :key="index"
                 :class="{ ['is-active']: currentIndex === index - 1 }"
                 @click="to(index - 1)"
-              />
+              ></li>
             </ul>
           </template>
         </n-carousel>
