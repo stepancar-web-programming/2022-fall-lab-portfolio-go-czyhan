@@ -20,7 +20,8 @@ In project module, get the markdown file information of the project through gith
 
 ## Website Address
 
-[Spbgzh.com](https://spbgzh.com)
+Deployed web page: [spbgzh.com](https://spbgzh.com)  
+Workflows Test page: [Azure Static Web App](https://purple-forest-0dd98f603.2.azurestaticapps.net)
 
 ### Project setup
 
