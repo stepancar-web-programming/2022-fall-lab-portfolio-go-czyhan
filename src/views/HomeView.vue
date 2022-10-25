@@ -48,9 +48,9 @@
               </n-col>
               <n-col :span="4" align="center">
                 <n-switch
+                  v-model:value="disabled"
                   size="large"
                   style="padding: 22px 0 0 70%"
-                  v-model:value="disabled"
                 /><br />
               </n-col>
             </n-row>

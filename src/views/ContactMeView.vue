@@ -107,6 +107,9 @@ import {
 } from "@vicons/ionicons5";
 
 export default defineComponent({
+  setup() {
+    return { LogoGithub, PeopleOutline, MailOutline, LogoWechat, LogoVk };
+  },
   data() {
     return {
       following: 0,
@@ -126,9 +129,6 @@ export default defineComponent({
       .catch((error: Error) => {
         console.log(error);
       });
-  },
-  setup() {
-    return { LogoGithub, PeopleOutline, MailOutline, LogoWechat, LogoVk };
   },
 });
 </script>
