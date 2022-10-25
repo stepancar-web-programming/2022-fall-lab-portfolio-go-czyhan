@@ -120,7 +120,7 @@ export default defineComponent({
   mounted() {
     axios
       .get("https://api.github.com/users/spbgzh")
-      .then((response: AxiosResponse) => {
+      .then((response) => {
         console.log(response.data);
         this.following = response.data.following;
         this.followers = response.data.followers;
