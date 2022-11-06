@@ -22,27 +22,3 @@ In project module, get the markdown file information of the project through gith
 
 Deployed web page: [spbgzh.com](https://spbgzh.com)  
 Workflows Test page: [Azure Static Web App](https://purple-forest-0dd98f603.2.azurestaticapps.net)
-
-### Project setup
-
-```bash
-npm install
-```
-
-#### Compiles and hot-reloads for development
-
-```bash
-npm run serve
-```
-
-#### Compiles and minifies for production
-
-```bash
-npm run build
-```
-
-#### Lints and fixes files
-
-```bash
-npm run lint
-```
