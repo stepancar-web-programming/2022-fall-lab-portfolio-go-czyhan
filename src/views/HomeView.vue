@@ -150,6 +150,7 @@ import {
   AnalyticsOutline,
   HappyOutline,
   GitMergeOutline,
+  HomeOutline,
 } from "@vicons/ionicons5";
 
 function renderIcon(icon: Component) {
@@ -289,6 +290,21 @@ const menuOptions: MenuOption[] = [
               ),
             key: "adopt-animal",
             icon: renderIcon(HeartOutline),
+          },
+
+          {
+            label: () =>
+              h(
+                RouterLink,
+                {
+                  to: {
+                    name: "home-page",
+                  },
+                },
+                { default: () => "HomePage" }
+              ),
+            key: "home-page",
+            icon: renderIcon(HomeOutline),
           },
         ],
       },

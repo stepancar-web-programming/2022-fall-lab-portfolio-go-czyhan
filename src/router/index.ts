@@ -91,6 +91,14 @@ const router = createRouter({
               component: async () => await import("../views/ProjectView.vue"),
             },
             {
+              path: "home-page",
+              name: "home-page",
+              meta: {
+                repository: "spbgzh/spbgzh.github.io",
+              },
+              component: async () => await import("../views/ProjectView.vue"),
+            },
+            {
               path: "bluetooth-car",
               name: "bluetooth-car",
               meta: {
