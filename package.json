@@ -12,6 +12,7 @@
     "@vue/eslint-config-typescript": "^11.0.2",
     "axios": "^1.0.0",
     "core-js": "^3.26.0",
+    "stable": "^0.1.8",
     "vue": "^3.2.13",
     "vue-concurrency": "^2.3.0",
     "vue-router": "^4.1.6"
