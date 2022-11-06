@@ -12,7 +12,7 @@ on:
 jobs:
   lint_test_job:
     runs-on: ubuntu-latest
-    name: Code Format
+    name: Lint Test Job
     steps:
       - uses: actions/checkout@v3
       - name: Run Lint
