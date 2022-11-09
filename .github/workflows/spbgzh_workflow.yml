@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run Lint
         run: |
-          npm install -g eslint
+          npm install eslint-plugin-vue@latest --save-dev
           eslint --ext .ts,.tsx,.js,.jsx,.vue .
 
   build_and_deploy_job:
