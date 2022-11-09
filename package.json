@@ -5,8 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx,.vue .",
-    "lint_test": "eslint --ext .ts,.tsx,.js,.jsx,.vue ."
+    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx,.vue ."
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.12.0",
