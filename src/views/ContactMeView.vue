@@ -91,6 +91,19 @@
             </n-gradient-text>
           </n-card>
         </n-tab-pane>
+        <n-tab-pane name="Video" tab="Video">
+          <div style="padding: 20px">
+            <iframe
+              id="ytplayer"
+              type="text/html"
+              width="720"
+              height="405"
+              src="https://www.youtube.com/embed/hZM5a-dDttg?autoplay=1&color=white"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </n-tab-pane>
       </n-tabs>
     </div>
   </div>
