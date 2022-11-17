@@ -3,11 +3,11 @@ name: spbgzh's workflow
 on:
   push:
     branches:
-      - dev
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - dev
+      - main
 
 jobs:
   lint_test_job:
